@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Madhav Kumawat - Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <img src="madhav.png" alt="Your Photo" class="profile-photo">
+    <h1>Madhav Kumawat</h1>
+    <p>Aspiring Student Developer</p>
+    <a href="#about" class="btn">About Me</a>
+    <a href="#projects" class="btn">My Projects</a>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>Hello! I am a skilled web developer with a passion for building dynamic, user-centric websites and applications. With expertise in HTML, CSS, JavaScript, and modern frameworks, I specialize in creating responsive, high-performance web solutions. My focus is on delivering clean, efficient code and seamless user experiences while staying updated with the latest industry trends and technologies.</p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <h2>My Projects</h2>
+    <div class="project-cards">
+        <div class="project-cards">
+            <div class="project-card">
+              <img src="p1.jpeg" alt="Project 1">
+              <h3>Online CV Builder</h3>
+              <p>An online resume builder that allows users to input their personal information and download a formatted resume.</p>
+              <a href="#" class="btn">View Project</a>
+            </div>
+            <div class="project-card">
+              <img src="p2.jpg" alt="Project 2">
+              <h3>Vehicle Rental System</h3>
+              <p>A full-stack vehicle rental system enables users to browse, book, and pay for vehicles online, with admin features for managing rentals, payments, and reviews..</p>
+              <a href="https://kanhapt9301.github.io/Vehicle-Rental-DriveNGo/" target="_blank" class="btn">View Project</a>
+            </div>
+            <div class="project-card">
+              <img src="p3.png" alt="Project 3">
+              <h3>Chat Application</h3>
+              <p>A real-time chat application where users can send messages to each other in chat rooms.</p>
+              <a href="#" class="btn">View Project</a>
+            </div>
+          </div>
+          
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="content">
+      <h2>Contact Me</h2>
+      <p>I’m always open to discussing new projects or ideas. Let’s connect!</p>
+      <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="04ae0ca4-6eba-4929-8c8f-e54d01419a63">
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2024 Madhav Kumawat. All Rights Reserved.</p>
+      <div class="social-links">
+        <a href="#" target="_blank" title="LinkedIn">
+          <img src="linked.png" alt="LinkedIn" />
+        </a>
+        <a href="#" target="_blank" title="GitHub">
+          <img src="github.png" alt="GitHub" />
+        </a>
+      </div>
+    </div>
+  </footer>
+  
+
+  <script>
+    const themeToggle = document.querySelector("#theme-switch");
+    themeToggle.addEventListener("change", () => {
+      document.body.classList.toggle("dark-mode");
+      localStorage.setItem("theme", themeToggle.checked ? "dark" : "light");
+    });
+
+    document.body.classList.toggle("dark-mode", localStorage.getItem("theme") === "dark");
+    themeToggle.checked = localStorage.getItem("theme") === "dark";
+  </script>
+</body>
+</html>
